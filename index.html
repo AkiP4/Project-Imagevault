@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-    <body>
-        <div class="mainContainer">
-            <h1 class="textMain">This is a simple file sharing page.</h1>
-            <h2 class="textSecondary">Feel free to try out the different options</h2>
-    
-            <div class="inputBox">
-                <br><label for="myImage">Select an image</label></br>
-                <input type="file" id="myImage" name="myImage">
-            </div>
-    
-            <div class="imageContainer">
-                <p>Your image should appear here after a while</p>
-            </div>
+<head>
 
-        </div>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
+</head>
 
+<body>
 
-    </body>
+    <div class="mainContainer">
+        <h1 class="textMain">This is a simple file sharing page.</h1>
+        <h2 class="textSecondary">Feel free to try out the different options</h2>
+    </div>
 
+    <div class="inputBox">
+        <br>
+        <label for="myImage">Select an image</label>
+        <br>
+        <input type='file' onchange="readURL(this);" />
+        <br>
+        <br>
+        <img id="meme" src="#" alt="Your image should appear here after a while." />
+    </div>
 
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#meme')
+                        .attr('src', e.target.result)
+                        .width(192) //Image width 
+                        .height(108); //Image height
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+</body>
 
 </html>
