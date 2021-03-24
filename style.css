@@ -1,7 +1,8 @@
-body, html {
+body {
     font-family: 'Roboto', sans-serif;
     background-image: url('4853433.jpg');
-    background-size: cover;
+    background-size: auto;
+    background-repeat: no-repeat;
 }
 
 .mainContainer {
@@ -12,11 +13,53 @@ body, html {
 }
 
 
-.footer {
-    align-items: bottom;
-    
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: cadetblue;
+    text-align: center;
+    border: 1px solid rgba(95, 158, 160, 0.527);
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+
 }
 
-.imageContainer {
-    
+form {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+    margin: 15px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+
+.input-group input {
+    height: 30px;
+    width: 90%;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    background: cadetblue;
+}
+
+.signIn {
+    text-align: center;
 }
