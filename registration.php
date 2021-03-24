@@ -2,9 +2,10 @@
 <HTML>
 
 <head>
-</head>
-    <title>User registration</title>
     <link rel="stylesheet" href="style.css">
+</head>
+
+    <title>User registration</title>
 <body>
     <div class="header">
         <h2>Registration</h2>

@@ -32,10 +32,12 @@ form {
     padding: 20px;
     background: white;
     border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 5px lightgrey;
 }
 
 .input-group {
     margin: 15px;
+    
 }
 
 .input-group label {
